@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<title>单条数据_Example</title>
+<meta name="keywords" content="图表">
+<meta name="description" content="图表_Example">
+<meta name="revised" content="ipc/2015/10/13">
+<meta name="author" content="Luoxue">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<!-- <link rel="shortcut icon" type="image/ico" href="/favicon.ico"> -->
+<link rel="stylesheet" href="../Style/chart.css">
+</head>
+<body>
+    
+    <header class="header">
+    	<h1>单条数据</h1>
+    	<h2>唯一的你，似风儿，似沙</h2>
+    </header>
+
+    <div class="navbar">
+    	<ul>
+    		<li><a href="../index.html">图表介绍</a></li>
+    		<li><a class="active" href="../chart.html">图表展示</a></li>
+    		<li><a href="javascript:;">帮助文档</a></li>
+    	</ul>
+    </div>
+
+    <div class="contain">
+
+        <div class="chart-item">
+            <div id="one-line-chart" class="chart"></div>
+            <div class="chart-title">
+                <a href="javascript:;"><i class="font-icon line-chart"></i>单条数据</a>
+                <a href="javascript:;"><i class="font-icon file-text"></i>帮助文档</a>
+            </div>
+        </div>
+
+        <section class="chart-about">
+            <h1>单条数据展示</h1>
+            <div class="chart-info">
+                
+            </div>
+        </section>
+
+    </div>
+
+<script src="../JavaScript/utils.js"></script>
+<script src="../JavaScript/chart.js"></script>
+<script src="../JavaScript/one_line_chart.js"></script>
+<script>
+
+    var moreLineChart = new LineChart('#one-line-chart', {
+
+        // 坐标原点
+        orgin: {x: 48, y: 48},
+
+        // X轴
+        xAxis: {
+            // X轴数据类型
+            type: 'date',
+
+            // X轴数据
+            data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+        },
+
+        // Y轴
+        yAxis: {
+            // Y轴数据类型
+            type: 'price',
+            // 刻度数
+            tickMark: 9,
+        },
+
+        // 数据
+        series: {
+            type: 'minuteData',
+            // 需要绘制的属性
+            attr: 'price',
+            // 需要绘制的数据
+            data: [
+                {
+                    price: (Math.random() * 10).toFixed(2),
+                    quantity: 200
+                },
+                {
+                    price: (Math.random() * 10).toFixed(2),
+                    quantity: 200
+                },
+                {
+                    price: (Math.random() * 10).toFixed(2),
+                    quantity: 200
+                },
+                {
+                    price: (Math.random() * 10).toFixed(2),
+                    quantity: 200
+                },
+                {
+                    price: (Math.random() * 10).toFixed(2),
+                    quantity: 200
+                },
+                {
+                    price: (Math.random() * 10).toFixed(2),
+                    quantity: 200
+                },
+                {
+                    price: (Math.random() * 10).toFixed(2),
+                    quantity: 200
+                },
+                {
+                    price: (Math.random() * 10).toFixed(2),
+                    quantity: 200
+                },
+                {
+                    price: (Math.random() * 10).toFixed(2),
+                    quantity: 200
+                },
+                {
+                    price: (Math.random() * 10).toFixed(2),
+                    quantity: 200
+                },
+                {
+                    price: (Math.random() * 10).toFixed(2),
+                    quantity: 200
+                },
+                {
+                    price: (Math.random() * 10).toFixed(2),
+                    quantity: 200
+                }
+            ]
+        }
+
+    });
+
+</script>
+</body>
+</html>
